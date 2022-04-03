@@ -3,9 +3,16 @@ const mongoose=require('mongoose');
 const dotenv=require('dotenv');
 const helmet=require('helmet');
 const morgan=require('morgan');
+const SignupPage=require('./routes/Signup');
 dotenv.config();
 
 const app=express();
+
+app.use(express.json());
+app.use(helmet());
+app.use(morgan("common"));
+
+app.use('/register',SignupPage);
 
 mongoose.connect(process.env.MONGO_URL,
     {useNewUrlParser:true, 
@@ -13,6 +20,6 @@ mongoose.connect(process.env.MONGO_URL,
     }).then(()=>console.log("Connected To MongoDB Atlas"))
       .catch(err=>console.log('Could  Not Connect To MongoDB',err));
 
-app.listen(8800,()=>{
-    console.log('Backend server  is running');
-})
+
+const port=process.env.PORT || 3000
+app.listen(port,()=>console.log(`BackEnd Server Connected To ${port}`));

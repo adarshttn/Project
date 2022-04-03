@@ -1,14 +1,14 @@
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Log from './components/Login/log';
+import  react from "react-router-dom";
+import Log from './components/Login/Log';
 
 
 function App() {
   return (
-    
-      
-      <log />
+
+      <>
+      <Log />
  
-     
+      </>
   );
 }
 

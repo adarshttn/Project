@@ -25,7 +25,7 @@ import react from 'react';
                 <label class="block text-md mb-2" for="Username"></label>
                 <input class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="text" name="text" placeholder="TTN Username" />
                 <label class="block text-md mb-2" for="password"></label>
-                <input class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="password" name="password" placeholder="password" />
+                <input class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="password" name="Password" placeholder="Password" />
                 
                 </div>
                 <div class="flex justify-between">
@@ -37,7 +37,7 @@ import react from 'react';
             </div>
                 <div className="topping">
                    
-                   <a href="#"className='border-2 border-pink-400 text-pink-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-pink-400 hover:text-white'>Sign In </a>
+                   <a href="#"className='border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white'>Sign In </a>
                 </div>
               </div>
 

@@ -31,7 +31,7 @@ import react from 'react';
                 <div class="flex justify-between">
               <div>
                 <input class="cursor-pointer" type="radio" name="rememberme" />
-                <span class="text-sm">Remember Me</span>
+                <span class="text-sm mb 2">Remember Me</span>
               </div>
               <span class="text-sm text-blue-700 hover:underline cursor-pointer">Forgot password?</span>
             </div>

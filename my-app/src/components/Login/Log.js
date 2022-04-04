@@ -21,15 +21,22 @@ import react from 'react';
               <div className="">
                 <h2 className="text-l text-slate-500 font-bold  ">Login To Your Account</h2>
 
-
                 <div className='flex flex-col items- center mb 10'>
-                  <input type="email" placeholder='TTN Username' />
-                  {/* <input type="Password" placeholder='Password' /> */}
+                <label class="block text-md mb-2" for="Username"></label>
+                <input class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="text" name="text" placeholder="TTN Username" />
+                <label class="block text-md mb-2" for="password"></label>
+                <input class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="password" name="password" placeholder="password" />
+                
                 </div>
+                <div class="flex justify-between">
+              <div>
+                <input class="cursor-pointer" type="radio" name="rememberme" />
+                <span class="text-sm">Remember Me</span>
+              </div>
+              <span class="text-sm text-blue-700 hover:underline cursor-pointer">Forgot password?</span>
+            </div>
                 <div className="topping">
-                   <input type="checkbox" id="topping" name="topping" value="Remberber Me "  />
-                   Remberber Me
-                   <p>Forgot Password?</p>
+                   
                    <a href="#"className='border-2 border-pink-400 text-pink-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-pink-400 hover:text-white'>Sign In </a>
                 </div>
               </div>

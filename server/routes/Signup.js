@@ -1,15 +1,25 @@
 const router = require("express").Router();
-const Signupget =require('../Models/SignupDb');
+const Signuppost =require('../Models/SignupDb');
+const bcrypt=require('bcrypt');
 
-router.get('/',async(req,res)=>{
-     const user= new Signupget({
-          username:"abhishekgautam06",
-          email:"abhi@ttn.com",
-          password:"12345"
-     })
-     await user.save();
-     res.send('ok');
+router.post('/',async(req,res)=>{
+     try{
+          
+          const salt=await bcrypt.genSalt(10);
+          const hashedPassword=await bcrypt.hash(req.body.password, salt);
+
+          const user=new Signuppost({
+               username:req.body.username,
+               email:req.body.email,
+               password: hashedPassword,
+          })
+
+          const User=await user.save();
+          res.status(200).json(user);
+     }
+     catch(err){
+          console.log(err);
+     }
 })
-
 
 module.exports=router;

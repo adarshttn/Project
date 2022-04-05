@@ -24,6 +24,7 @@ export default function Home() {
         </div>
         <div className="col-span-1">
         <Rightbar1 />
+        <Rightbar2 />
 
         </div>
        

@@ -4,7 +4,7 @@ const bcrypt=require('bcrypt');
 
 
 //User Will Signup and this data would be saved to Database
-router.post('/register',async(req,res)=>{
+router.post('/',async(req,res)=>{
      try{
           
           const salt=await bcrypt.genSalt(10);

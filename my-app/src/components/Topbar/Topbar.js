@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React from 'react'
 import './Topbar.css'
 
@@ -34,4 +33,4 @@ export default function Topbar() {
 
   )
 }
->>>>>>> ea95063d2c3d5154c59d23cebbc56559bd76f930
+

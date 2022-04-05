@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React from 'react'
 import './Topbar.css'
 
@@ -9,7 +8,7 @@ export default function Topbar() {
       <div className="flex">
         <div className="flex-none mt-2 ml-3">
           <div className="relative w-12 h-12">
-            <img className="rounded-full border border-gray-100 shadow-sm" src="https://randomuser.me/api/portraits/women/81.jpg" alt="user image" />
+            <img className="rounded-full border border-gray-100 shadow-sm" src="https://randomuser.me/api/portraits/women/81.jpg" alt="user" />
           </div>
         </div >
         <div className="flex-1 w-full mt-2.5 ml-2 mr-2">
@@ -34,4 +33,4 @@ export default function Topbar() {
 
   )
 }
->>>>>>> ea95063d2c3d5154c59d23cebbc56559bd76f930
+

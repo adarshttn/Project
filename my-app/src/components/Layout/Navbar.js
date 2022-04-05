@@ -10,7 +10,7 @@ function Navbar() {
             <div class="flex justify-between">
               <div class="flex space-x-5">
                 <a href="#" class="flex items-center py-4 px-2">
-                  <img src="/images/ttnlogo.jpeg" alt="Logo" class="h-8 w-8 mr-0 float-left" />
+                  <img src="logo.png" alt="Logo" class="h-6 w-8 mr-0 float-left" />
 
                 </a>
 

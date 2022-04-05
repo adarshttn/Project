@@ -19,6 +19,10 @@ const signupSchema=new mongoose.Schema({
         type:String,
         required:true,
         min:4
+    },
+    isAdmin:{
+        type:Boolean,
+        default:false
     }    
 })
 

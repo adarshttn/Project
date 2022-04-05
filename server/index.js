@@ -4,6 +4,7 @@ const dotenv=require('dotenv');
 const helmet=require('helmet');
 const morgan=require('morgan');
 const SignupPage=require('./routes/Signup');
+const SignputPage=require('./routes/Signput');
 dotenv.config();
 
 const app=express();
@@ -12,7 +13,8 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-app.use('/',SignupPage);
+app.use('/register',SignupPage);
+app.use('/',SignputPage);
 
 mongoose.connect(process.env.MONGO_URL,
     {useNewUrlParser:true, 

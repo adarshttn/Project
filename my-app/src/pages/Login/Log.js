@@ -81,20 +81,20 @@ function Log() {
                       />
                     </div>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center">
+                      <div className="flex items-center mb-3">
                         <input
-                          className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded mb-3"
+                          className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded "
                           id="remember-me"
                           name="remember-me"
                           type="checkbox"
                         />
-                        <label className="ml-2 block text-sm text-gray-900 mb-3">
+                        <label className="ml-2 block text-sm text-gray-900 mt-3 ">
                           {/* // htmlFor="remember-me" > */}
                           Remember me
                         </label>
                       </div>
 
-                      <div className="text-sm">
+                      <div className="text-sm ">
                         <a
                           href="#"
                           className="font-medium text-indigo-600 hover:text-indigo-500"

@@ -5,7 +5,8 @@ export default function Sidebar1() {
   return (
 
 
-<div className="rounded overflow-hidden shadow-xl max-w-xs my-3 bg-white">
+
+<div className="rounded-xl overflow-hidden shadow-xl w-64 my-3 bg-white">
   	<img src="https://i.imgur.com/dYcYQ7E.png" className="w-full" />
     <div className="flex justify-center -mt-5">
         <img src="https://randomuser.me/api/portraits/women/81.jpg" className="rounded-full  border-solid border-white border-2 -mt-3"/>		

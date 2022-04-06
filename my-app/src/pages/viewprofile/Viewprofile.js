@@ -70,8 +70,10 @@ export default function Viewprofile() {
             </div>
           </div>
         </div>
-        <div className=" col-span-1 flex mt-10  ">
+        <div className="justify-items-center">
+        <div className=" col-span-1  mt-10  ">
           <Rightbar2 />
+        </div>
         </div>
       </div>
     </>

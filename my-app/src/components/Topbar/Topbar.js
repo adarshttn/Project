@@ -3,9 +3,10 @@ import './Topbar.css'
 
 export default function Topbar() {
   return (
-    <>
+    
+    <div className="w-full">
       <div
-        className="flex items-center gap-x-2 justify-start topbar h-16 bg-white p-5 rounded-2xl shadow-2xl
+        className="flex  items-center gap-x-2 justify-start  h-16 bg-white p-5 rounded-2xl shadow-2xl
       text-gray-500 font-medium mt-6"
       >
         <div className="">
@@ -41,7 +42,8 @@ export default function Topbar() {
           <span className="   ">Photo/Video</span>
         </div>
       </div>
-    </>
+      </div>
+    
   );
 }
 

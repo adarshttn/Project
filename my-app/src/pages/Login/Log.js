@@ -1,6 +1,7 @@
 import react from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function Log() {
   const [formData, setFormData] = useState({
@@ -103,9 +104,17 @@ function Log() {
                       </div>
                     </div>
                     <div className="topping">
-                      <button className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white">
-                        Sign In
-                      </button>
+                      {/* <a  href="/home">
+                      Sign In
+
+
+                      </a> */}
+                      <Link className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" to="/home"> Sign In</Link>
+
+                      {/* <button className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white">
+                        
+                        
+                      </button> */}
                     </div>
                   </div>
                 </div>

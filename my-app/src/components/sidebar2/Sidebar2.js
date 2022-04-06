@@ -4,7 +4,7 @@ import './Sidebar2.css'
 
 export default function Sidebar2() {
   return (
-    <div className='sidebar2 h-94 bg-white w-64 ml-9 text-sm divide-y'>
+    <div className=' h-94 bg-white w-64 rounded-xl text-sm divide-y'>
       <ul className='ml-6 '><span className='text-lg mt-3 font-semibold'>Recent</span>
         <li className='flex mt-4'>
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -65,7 +65,7 @@ export default function Sidebar2() {
           <button className=' flex  mt-3'> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
-            <span className='ml-2 mb-3 mb-3'>show 6 more</span>
+            <span className='ml-2  mb-3'>show 6 more</span>
           </button>
 
         </li>

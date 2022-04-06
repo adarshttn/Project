@@ -13,8 +13,9 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-app.use('/register',SignupPage);
-app.use('/login',SignputPage);
+app.use('/',SignupPage);
+app.use('/',SignputPage);
+
 
 mongoose.connect(process.env.MONGO_URL,
     {useNewUrlParser:true, 
@@ -23,5 +24,5 @@ mongoose.connect(process.env.MONGO_URL,
       .catch(err=>console.log('Could  Not Connect To MongoDB',err));
 
 
-const port=process.env.PORT || 3000
+const port=process.env.PORT || 5000
 app.listen(port,()=>console.log(`BackEnd Server Connected To ${port}`));

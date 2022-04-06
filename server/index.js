@@ -14,7 +14,7 @@ app.use(helmet());
 app.use(morgan("common"));
 
 app.use('/register',SignupPage);
-app.use('/',SignputPage);
+app.use('/login',SignputPage);
 
 mongoose.connect(process.env.MONGO_URL,
     {useNewUrlParser:true, 

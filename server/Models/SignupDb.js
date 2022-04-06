@@ -20,6 +20,10 @@ const signupSchema=new mongoose.Schema({
         required:true,
         min:4
     },
+    profilepic:{
+        type:String,
+        default:""
+    },
     isAdmin:{
         type:Boolean,
         default:false

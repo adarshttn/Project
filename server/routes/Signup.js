@@ -3,7 +3,7 @@ const Signuppost = require("../Models/SignupDb");
 const bcrypt = require("bcrypt");
 
 //User Will Signup and this data would be saved to Database
-router.post("/", async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
@@ -34,9 +34,9 @@ router.post("/login", async (req, res) => {
     !validPassword && res.status(400).json("wrong password");
 
     res.status(200).json(user);
-  } catch (err) {
+  } catch (err) { 
     res.status(500).json(err);
-  }
+} 
 });
 
 

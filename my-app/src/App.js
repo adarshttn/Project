@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Log />} />
           <Route path="/Home" element={<Home />} />
+          
         </Routes>
       </Router>
       <ToastContainer />

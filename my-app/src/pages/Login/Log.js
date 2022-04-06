@@ -25,8 +25,11 @@ function Log() {
     <>
       <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
         <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-          <div className="bg-white rounded-2xl shadow-2xl flex w-2/3 max-w-4xl">
-            <div className="w-2.5/5 p-5 bg-white rounded-2xl rounded-br-2xl py-36 px-12">
+          <div className="bg-white rounded-2xl shadow-2xl  grid grid-cols-5  max-w-4xl">
+            <div className="col-span-2 p-5 bg-white rounded-2xl rounded-br-2xl py-36 px-12">
+              <div className="flex items-center justify-center ">
+                <img className="w-20 h-15 mb-7 " src="logo.png" alt="" />
+              </div>
               <h1 className="text-xl text-slate-600 mb-6">
                 Enter Your details and start your journey with us
               </h1>
@@ -43,7 +46,7 @@ function Log() {
               </a>
             </div>
 
-            <section>
+            <section className="col-span-3">
               <form onSubmit={onSubmit}>
                 <div className="w-4/5 p-5 white-500 rounded-2xl rounded-br-2xl py-36 px-12">
                   <div className="">
@@ -52,43 +55,39 @@ function Log() {
                     </h2>
 
                     <div className="flex flex-col items- center mb 10">
-                      <label
-                        className="block text-md mb-2"
-                        for="Username"
-                      ></label>
-                      <input
-                        className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
-                        type="text"
-                        id="email"
-                        name="email"
-                        // value={email}
-                        // onChange = {onchange}
-                        placeholder="TTN Username"
-                        required
-                      />
-                      <label
-                        className="block text-md mb-2"
-                        for="password"
-                      ></label>
-                      <input
-                        className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
-                        type="password"
-                        name="Password"
-                        // value={password}
-                        // onchange = {onchange}
-                        placeholder="Password"
-                        required
-                      />
+                      <div className="border-b border-teal-500 mt-3">
+                        <input
+                          className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none appearance-none border-none"
+                          type="text"
+                          id="email"
+                          name="email"
+                          // value={email}
+                          // onChange = {onchange}
+                          placeholder="TTN Username"
+                          required
+                        />
+                      </div>
+                      <div className="border-b border-teal-500 mt-2">
+                        <input
+                          className="px-4 w-full border-2 py-2  appearance-none border-none  rounded-md text-sm outline-none"
+                          type="password"
+                          name="Password"
+                          // value={password}
+                          // onchange = {onchange}
+                          placeholder="Password"
+                          required
+                        />
+                      </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center mb-3">
+                      <div className="flex items-center  mb-3 mt-3">
                         <input
                           className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded "
                           id="remember-me"
                           name="remember-me"
                           type="checkbox"
                         />
-                        <label className="ml-2 block text-sm text-gray-900 mt-3 ">
+                        <label className="ml-2 block text-sm text-gray-900  ">
                           {/* // htmlFor="remember-me" > */}
                           Remember me
                         </label>

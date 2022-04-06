@@ -9,8 +9,8 @@ function Navbar() {
           <div class="max-w-6xl  px-4">
             <div class="flex justify-between">
               <div class="flex space-x-5">
-                <a href="/" class="flex items-center py-4 px-2">
-                  <img src="my-app/public/images/ttnlogo.jpeg" alt="Logo" class="h-8 w-8 mr-0 float-left" />
+                <a href="#" class="flex items-center py-4 px-2">
+                  <img src="logo.png" alt="Logo" class="h-6 w-8 mr-0 float-left" />
 
                 </a>
 

@@ -11,17 +11,30 @@ import "./Home.css"
 export default function Home() {
   return (
     <>
+    <div className=''>
     <Navbar />
-    <div className=' grid grid-cols-4 gap-7 h-full mt-7 ml-20 mr-20  '>
-        <Sidebar1 />
+    <div className=' grid grid-cols-3 gap-4  '>
+      <div className="col-span-1">
+      <Sidebar1 />
+      </div>
         
+        <div className="col-span-1">
         <Topbar />
-       
+
+        </div>
+        <div className="col-span-1">
         <Rightbar1 />
-        <Sidebar2 />
-        <Feeds />
         <Rightbar2 />
+
+        </div>
+       
+        
+       
+        
     </div>
+
+    </div>
+    
     </>
   )
 }

@@ -23,7 +23,7 @@ router.put('/:id',async(req,res)=>{
     }
 }else{
     return res.status(403).json("Can't update other user Account ");
-}});
+}});    
 
 router.delete('/:id',async(req,res)=>{
     if(req.body.userId === req.params.id || req.body.isAdmin){
@@ -37,7 +37,5 @@ router.delete('/:id',async(req,res)=>{
     return res.status(403).json("Can't delete other user Account ");
 }}
 );
-
-
 
 module.exports = router;

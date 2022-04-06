@@ -55,7 +55,7 @@ function Log() {
                     </h2>
 
                     <div className="flex flex-col items- center mb 10">
-                      <div className="border-b border-teal-500 mt-3">
+                      <div className="border-b border-black-500 mt-3">
                         <input
                           className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none appearance-none border-none"
                           type="text"
@@ -67,7 +67,7 @@ function Log() {
                           required
                         />
                       </div>
-                      <div className="border-b border-teal-500 mt-2">
+                      <div className="border-b border-black-500 mt-2">
                         <input
                           className="px-4 w-full border-2 py-2  appearance-none border-none  rounded-md text-sm outline-none"
                           type="password"

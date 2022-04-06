@@ -5,7 +5,7 @@ export default function Rightbar1() {
   return (
     <>
       <div className="gap-3 ">
-        <div className="relative rightbar mt-8 ml-20 mr-20 scrollbar-thin scrollbar-thumb-gray-300  scrollbar-track-gray-100 max-h-96 bg-white rounded-xl overflow-y-auto ">
+        <div className="relative rightbar mt-8  scrollbar-thin scrollbar-thumb-gray-300  scrollbar-track-gray-100 max-h-96 bg-white rounded-xl overflow-y-auto ">
           <div className="flex justify-between pb-3 text-black  ">
             <div className="ml-3 mt-3 pr-3 text-xl">
               <h2>Contact</h2>
@@ -72,8 +72,10 @@ export default function Rightbar1() {
             </div>
           </div>
         </div>
+
         <br />
-        <div className="relative rightbar ml-20 mr-20 max-h-96 scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-300  scrollbar-track-gray-100 bg-white rounded-xl overflow-y-auto">
+
+        <div className="relative rightbar  max-h-96 scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-300  scrollbar-track-gray-100 bg-white rounded-xl overflow-y-auto">
           <div className="flex justify-between pb-3 text-black ">
             <div className="ml-3 mt-3 pr-3 text-xl">
               <h2>Contact</h2>

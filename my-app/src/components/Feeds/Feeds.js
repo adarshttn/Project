@@ -1,8 +1,8 @@
-import React from "react";
-import {ChatAltIcon, ShareIcon,ThumbUpIcon} from "@heroicons/react/outline"
-import "./Feeds.css";
+import React from 'react'
+import './Feeds.css'
+import {ThumbUpIcon, ChatAltIcon , ShareIcon} from "@heroicons/react/outline";
 
-function Feeds() {
+export default function Feeds() {
   return (
     <div className="flex flex-col ">
       <div className="p-7 bg-white mt-5 rounded-t-2xl shadow-sm">
@@ -30,6 +30,9 @@ function Feeds() {
       <div className="  p-8 h-60 md:h-96 bg-white">
         <img className="rounded-md " src="https://casiocdn.com/casio-v2/resource/temp/images/Artwork-home/oceanus_mobile.jpg" alt="" />
       </div>
+     <div>
+
+     </div>
 
       {/* Footer of post */}
       <div className="flex rounded-b-2xl bg-white shadow-md text-gray-400 borde-t">
@@ -55,4 +58,3 @@ function Feeds() {
     </div>
   );
 }
-export default Feeds;

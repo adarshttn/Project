@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
  import 'react-toastify/dist/ReactToastify.css'
 import React from "react";
 import Log from "./pages/Login/Log";
-// import Feeds from "./components/Feeds/Feeds";
+
 import Home from "./pages/home/Home";
 import { ToastContainer } from "react-toastify";
 import Viewprofile from "./pages/viewprofile/Viewprofile";
-import EditProfile from "./pages/EditProfile/EditProfile";
+import Profile from "./pages/Editprofile/Profile";
 
 function App() {
   return (
@@ -17,8 +17,9 @@ function App() {
           <Route path="/" element={<Log />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Home/Viewprofile" element={<Viewprofile />} />
-          <Route path="/Home/Viewprofile/EditProfile" element={<EditProfile />} />
+          <Route path="/Home/Viewprofile/Profile" element={<Profile />} />
 
+          
         </Routes>
       </Router>
       <ToastContainer />

@@ -27,8 +27,8 @@ function Feeds() {
         </p>
       </div>
       {/* postImage */}
-      <div className="relative h-56 md:h-96 bg-white">
-        <img src="https://randomuser.me/api/portraits/women/81.jpg" alt="" />
+      <div className="  p-8 h-60 md:h-96 bg-white">
+        <img className="rounded-md " src="https://casiocdn.com/casio-v2/resource/temp/images/Artwork-home/oceanus_mobile.jpg" alt="" />
       </div>
 
       {/* Footer of post */}

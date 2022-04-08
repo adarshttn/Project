@@ -6,6 +6,8 @@ const morgan=require('morgan');
 const SignupPage=require('./routes/Signup');
 const SignputPage=require('./routes/Signput');
 const postRoute=require('./routes/posts');
+const profileRoute=require('./routes/ProfileRoute');
+
 dotenv.config();
 
 const app=express();
@@ -17,7 +19,7 @@ app.use(morgan("common"));
 app.use('/',SignupPage);
 app.use('/',SignputPage);
 app.use('/posts',postRoute);
-
+app.use('/profile',profileRoute);
 
 mongoose.connect(process.env.MONGO_URL,
     {useNewUrlParser:true, 

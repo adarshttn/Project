@@ -1,26 +1,48 @@
+import { useContext, useRef } from "react";
+import { loginCall } from "../../apiCalls";
+import { AuthContext } from "../../context/AuthContext";
 import react from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
+
 function Log() {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
 
-  const { email, password } = formData;
+  ///===================for uncomment
 
+  // const [formData, setFormData] = useState({
+  //   email: "",
+  //   password: "",
+  // });
+
+  // const { email, password } = formData;
+  ///===============================
   // const onChange = (e) => {
   //   setFormData((prevState) => ({
   //     ...prevState,
   //     [e.terget.name]: e.target.value,
   //   }))
   // }
+  ///====================
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
+  // };
+  ///=======================
+  const email = useRef();
+  const password = useRef();
+  const {user, isFetching, dispatch } = useContext(AuthContext);
 
-  const onSubmit = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
+    loginCall(
+      { email: email.current.value, password: password.current.value },
+      dispatch
+    );
   };
+
+
+console.log(user)
 
   return (
     <>
@@ -48,7 +70,7 @@ function Log() {
             </div>
 
             <section className="col-span-3">
-              <form onSubmit={onSubmit}>
+              <form onSubmit={handleClick}>
                 <div className="w-4/5 p-5 white-500 rounded-2xl rounded-br-2xl py-36 px-12">
                   <div className="">
                     <h2 className="text-l text-slate-500 font-bold  ">
@@ -64,6 +86,8 @@ function Log() {
                           name="email"
                           // value={email}
                           // onChange = {onchange}
+                          ref={email}
+
                           placeholder="TTN Username"
                           required
                         />
@@ -75,6 +99,8 @@ function Log() {
                           name="Password"
                           // value={password}
                           // onchange = {onchange}
+                          ref={password}
+
                           placeholder="Password"
                           required
                         />
@@ -109,12 +135,13 @@ function Log() {
 
 
                       </a> */}
-                      <Link className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" to="/home"> Sign In</Link>
+                      {/* <Link className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" to="/home"> Sign In</Link> */}
 
-                      {/* <button className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white">
-                        
-                        
-                      </button> */}
+                      <button className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" type="submit" disabled={isFetching}>
+                    Login
+
+
+                      </button>
                     </div>
                   </div>
                 </div>

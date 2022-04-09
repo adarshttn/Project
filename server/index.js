@@ -7,6 +7,8 @@ const SignupPage=require('./routes/Signup');
 const SignputPage=require('./routes/Signput');
 const postRoute=require('./routes/posts');
 const profileRoute=require('./routes/ProfileRoute');
+const commentRoute=require('./routes/comment');
+const forgotpassRoute=require('./routes/Forgotpass');
 
 dotenv.config();
 
@@ -19,7 +21,9 @@ app.use(morgan("common"));
 app.use('/',SignupPage);
 app.use('/',SignputPage);
 app.use('/posts',postRoute);
-app.use('/profile',profileRoute);
+app.use('/profile',profileRoute); 
+app.use('/comment',commentRoute);
+app.use('/forgotpass',forgotpassRoute);
 
 mongoose.connect(process.env.MONGO_URL,
     {useNewUrlParser:true, 

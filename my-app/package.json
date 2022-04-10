@@ -48,5 +48,5 @@
   "devDependencies": {
     "tailwindcss": "^3.0.23"
   },
-  "proxy": "http://localhost:9000"
+  "proxy": "http://localhost:3000"
 }

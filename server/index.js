@@ -14,6 +14,12 @@ dotenv.config();
 
 const app=express();
 
+mongoose.connect(process.env.MONGO_URL,
+  {useNewUrlParser:true, 
+   useUnifiedTopology: true,
+  }).then(()=>console.log("Connected To MongoDB Atlas"))
+    .catch(err=>console.log('Could  Not Connect To MongoDB',err));
+
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
@@ -25,11 +31,6 @@ app.use('/profile',profileRoute);
 app.use('/comment',commentRoute);
 app.use('/forgotpass',forgotpassRoute);
 
-mongoose.connect(process.env.MONGO_URL,
-    {useNewUrlParser:true, 
-     useUnifiedTopology: true,
-    }).then(()=>console.log("Connected To MongoDB Atlas"))
-      .catch(err=>console.log('Could  Not Connect To MongoDB',err));
 
 
 const port=process.env.PORT || 3000

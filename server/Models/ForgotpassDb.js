@@ -5,10 +5,6 @@ const forgotpassSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    oldpass:{
-        type: String,
-        required: true
-    },
     newpass:{
         type: String,
         required: true

@@ -12,7 +12,6 @@ router.post('/:id',async(req,res)=>{
         else{
             const forgotpass1 = new Forgotpass({
                 email: req.body.email,
-                oldpass: req.body.oldpass,
                 newpass: req.body.newpass,
                 confirmpass: req.body.confirmpass
             });

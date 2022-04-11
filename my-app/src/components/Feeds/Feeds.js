@@ -38,18 +38,18 @@ export default function Feeds() {
       <div className="flex rounded-b-2xl bg-white shadow-md text-gray-400 borde-t">
         <div className="inputIcon rounded-non rounded-bl-2xl">
 
-          <div className="inputIcon">
-          <ThumbUpIcon className="h-4" />
+          <div className="inputIcon ">
+          <ThumbUpIcon className="h-6" />
           <p className="text-xs sm:text-base">Like</p>
           </div>
 
-          <div className="inputIcon">
-            <ChatAltIcon className="h-4 "/>
+          <div className="inputIcon ">
+            <ChatAltIcon className="h-6 "/>
             <p className="test-xs sm:text-base">Comment</p>
           </div>
 
-          <div className="inputIcon">
-            <ShareIcon className="h-4"/>
+          <div className="inputIcon ">
+            <ShareIcon className="h-6"/>
             <p className="test-xs sm:text-base">Share</p>
 
           </div>

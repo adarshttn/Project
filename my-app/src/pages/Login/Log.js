@@ -1,37 +1,19 @@
 import { useContext, useRef } from "react";
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
+import Home from "../home/Home";
 import react from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+
 
 
 function Log() {
-
-  ///===================for uncomment
-
-  // const [formData, setFormData] = useState({
-  //   email: "",
-  //   password: "",
-  // });
-
-  // const { email, password } = formData;
-  ///===============================
-  // const onChange = (e) => {
-  //   setFormData((prevState) => ({
-  //     ...prevState,
-  //     [e.terget.name]: e.target.value,
-  //   }))
-  // }
-  ///====================
-  // const onSubmit = (e) => {
-  //   e.preventDefault();
-  // };
-  ///=======================
   const email = useRef();
   const password = useRef();
-  const {user, isFetching, dispatch } = useContext(AuthContext);
+ 
+  const { user, isFetching, dispatch } = useContext(AuthContext);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -39,10 +21,19 @@ function Log() {
       { email: email.current.value, password: password.current.value },
       dispatch
     );
+  
+
+   
+   
+  
   };
+ 
+ 
+  
 
-
-console.log(user)
+  
+  console.log(user)
+ 
 
   return (
     <>
@@ -84,8 +75,6 @@ console.log(user)
                           type="text"
                           id="email"
                           name="email"
-                          // value={email}
-                          // onChange = {onchange}
                           ref={email}
 
                           placeholder="TTN Username"
@@ -97,8 +86,6 @@ console.log(user)
                           className="px-4 w-full border-2 py-2  appearance-none border-none  rounded-md text-sm outline-none"
                           type="password"
                           name="Password"
-                          // value={password}
-                          // onchange = {onchange}
                           ref={password}
 
                           placeholder="Password"
@@ -135,10 +122,13 @@ console.log(user)
 
 
                       </a> */}
-                      {/* <Link className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" to="/home"> Sign In</Link> */}
+                      {/* <Link className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white"type="submit" disabled={isFetching} to="/home"> Sign In</Link> */}
 
-                      <button className="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" type="submit" disabled={isFetching}>
-                    Login
+                      <button className ="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" type="submit" 
+   
+                       >
+                        
+                        Login
 
 
                       </button>

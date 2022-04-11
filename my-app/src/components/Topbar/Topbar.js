@@ -9,13 +9,13 @@ export default function Topbar() {
         className="flex  items-center gap-x-2 justify-start  h-16 bg-white p-5 rounded-2xl shadow-2xl
       text-gray-500 font-medium mt-6"
       >
-        <div className="">
+        
           <img
             className="rounded-full border w-11 h-11    shadow-sm"
             src="https://randomuser.me/api/portraits/women/81.jpg"
             alt=""
           />
-        </div>
+        
         <div className="flex flex-grow ">
           <input
             className="h-10 w-full px-10 pl-10  rounded-fully rounded-full bg-gray-100 focus:outline-none "

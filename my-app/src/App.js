@@ -1,5 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
- import 'react-toastify/dist/ReactToastify.css'
+import {
+  BrowserRouter as
+    Router, Route, Routes, Switch, Redirect
+} from "react-router-dom";
+
+import 'react-toastify/dist/ReactToastify.css'
 import React from "react";
 import Log from "./pages/Login/Log";
 import { useNavigate } from 'react-router';

@@ -4,7 +4,7 @@ import "./Rightbar1.css";
 export default function Rightbar1() {
   return (
     <>
-      <div className="gap-3 fixed right-5 ">
+      <div className="gap-3 ">
         <div className="relative rightbar mt-8  scrollbar-thin scrollbar-thumb-gray-300  scrollbar-track-gray-100 max-h-96 bg-white rounded-xl overflow-y-auto ">
           <div className="flex justify-between pb-3 text-black  ">
             <div className="ml-3 mt-3 pr-3 text-xl">

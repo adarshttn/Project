@@ -1,7 +1,22 @@
 import React from 'react'
-import './Topbar.css'
+
 
 export default function Topbar() {
+
+  const selectMedia = () => {
+    const myWidget = window.cloudinary.createUploadWidget(
+      {
+        cloudName: "dwtse2bnt",
+        uploadPreset: "my_preset",
+      },
+      (error, result) => {
+        if (!error && result && result.event === "success") {
+          console.log("Done! Here is the image info: ", result.info);
+        }
+      }
+    );
+    myWidget.open();
+  };
   return (
     
     <div className="w-full">
@@ -39,7 +54,9 @@ export default function Topbar() {
               d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
             />
           </svg>
-          <span className="   ">Photo/Video</span>
+          <span className=" Photo/Video  " onClick={selectMedia} >
+          {" "}
+          Photo/Video</span>
         </div>
       </div>
       </div>

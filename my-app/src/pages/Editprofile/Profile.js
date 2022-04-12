@@ -1,8 +1,11 @@
 import React from "react";
+import Navbar from "../../components/Layout/Navbar";
 
 function Profile() {
   return (
-    <div className="grid grid-cols-3  bg-slate-200 h-screen gap-10 ">
+    <>
+    <Navbar />
+    <div className="grid grid-cols-3  bg-slate-200   ">
       <div className="  col-span-2 gap-10 ">
         <div className="ml-10 mt-10 rounded-md shadow-xl  ">
           <div className="rounded-md shadow-xl w-100%  bg-white h-screen ">
@@ -21,7 +24,7 @@ function Profile() {
             </div>
 
             <div>
-              <form class="w-full max-w-lg">
+              <form class="w-full max-w-lg ml-10">
                 <div class="flex flex-wrap -mx-3 mb-6">
                   <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label
@@ -95,38 +98,36 @@ function Profile() {
                     />
                   </div>
 
-                  <div class="w-full md:w-1/2 px-3">
+                  <div class="w-full md:w-1/2 px-3 mt-3">
                     <label
                       class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                       for="grid-last-name"
                     >
-                      Last Name
+                      Gender
                     </label>
                     <input
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="grid-last-name"
+                      id=""
                       type="text"
-                      placeholder="Last Name"
+
+                      placeholder=""
                     />
                   </div>
 
-                  <div class="w-full md:w-1/2 px-3">
+                  <div class="w-full md:w-1/2 px-3 mt-3">
                     <label
                       class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                       for="grid-last-name"
                     >
-                      Last Name
+                      Birthday
                     </label>
                     <input
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="grid-last-name"
-                      type="text"
+                      type="date"
                       placeholder="Last Name"
                     />
                   </div>
-                </div>
-                <div class="flex flex-wrap -mx-3 mb-6">
-                  <div class="w-full px-3"></div>
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-2">
                   <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -140,7 +141,7 @@ function Profile() {
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="grid-city"
                       type="text"
-                      placeholder="Albuquerque"
+                      placeholder="Noida"
                     />
                   </div>
                   <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -155,9 +156,9 @@ function Profile() {
                         class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         id="grid-state"
                       >
-                        <option>New Mexico</option>
-                        <option>Missouri</option>
-                        <option>Texas</option>
+                        <option>Up</option>
+                        <option>Bihar</option>
+                        <option>Jharkhand</option>
                       </select>
                       <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
@@ -181,23 +182,29 @@ function Profile() {
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="grid-zip"
                       type="text"
-                      placeholder="90210"
+                      placeholder="201001"
                     />
                   </div>
                 </div>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                  Button
-                </button>
+                <div className="flex flex-row mt-8 gap-6">
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                  Save
+                  </button>
+                  
 
-                <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                  Button
-                </button>
+                   <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                  Reset All
+                   </button>
+                </div>
+                
               </form>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
+    </>
   );
 }
 

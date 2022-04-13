@@ -1,5 +1,5 @@
 import React from "react";
-import "./Feeds.css";
+
 import { ThumbUpIcon, ChatAltIcon, ShareIcon } from "@heroicons/react/outline";
 
 export default function Feeds() { 

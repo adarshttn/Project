@@ -6,6 +6,8 @@ import react from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
+import {signInWithPopup, GoogleAuthProvider} from 'firebase/auth';
+import {authentication} from './../../firebase-config/firebase-config'
 
 
 
@@ -24,7 +26,11 @@ function Log() {
     );
   };
  
- 
+  useEffect(()=>{
+    if(user ){
+      return Navigate('/Home');
+    }
+  })
  
   
 

@@ -1,14 +1,14 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './Navbar.css'
 
 
 function Navbar() {
-  let info =JSON.parse (localStorage.getItem("user"))
-  const navigate=useNavigate()
+  let info = JSON.parse(localStorage.getItem("user"))
+  const navigate = useNavigate()
 
   console.warn(info)
-  function logOut(){
+  function logOut() {
     localStorage.clear();
     navigate('/')
   }
@@ -22,17 +22,25 @@ function Navbar() {
               <div class="flex space-x-5">
                 <a href="#" class="flex items-center py-4 px-2">
                   <img src="logo.png" alt="Logo" class="h-6 w-8 mr-0 float-left" />
-
                 </a>
-
               </div>
-
-              <div class="flex  space-x-2 right-0 top-2" >
+              <div class="flex gap-2  right-0 mt-3 mr-3 text-lg" >
+                <div>
+                  <span>Shekhar Agarwal</span>
+                </div>
+                <div>
+                  <a >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </a>
+                </div>
                 <div className='dropdown inline-block relative '>
-                  <button className="mt-2 rounded-full bg-blue-50">
+                  <button className=" rounded-full bg-blue-50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-6 h-6 text-gray-200"
+                      class="w-8 h-8 text-gray-200"
                       fill="bg-[url()]"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -47,33 +55,15 @@ function Navbar() {
                   </button>
                   <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
                     <li class=""><a class="rounded-t bg-blue-400 hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap"
-                     onClick={logOut}
-                     >logout</a></li>
-                    
+                      onClick={logOut}
+                    >logout</a></li>
                   </ul>
                 </div>
-                <div>
-                  <span>Shekhar Agarwal</span>
-                </div>
-                <div>
-                  <a >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-
-
-
-                    </svg>
-                  </a>
-                </div>
-
-
               </div>
             </div>
           </div>
         </nav>
       </body>
-
     </>
   )
 }

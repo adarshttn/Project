@@ -1,11 +1,14 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserCircleIcon, ChatIcon, LogoutIcon } from "@heroicons/react/outline";
+import { useContext } from 'react';
 import './Navbar.css'
+import {AuthContext} from "../../context/AuthContext"
 
 
 function Navbar() {
   let info = JSON.parse(localStorage.getItem("user"))
+  const {user} =useContext(AuthContext);
   const navigate = useNavigate()
 
   console.warn(info)
@@ -27,7 +30,7 @@ function Navbar() {
               </div>
               <div class="flex gap-2  right-0 mt-3 mr-3 text-lg" >
                 <div>
-                  <span>Shekhar Agarwal</span>
+                  <span>{user.username}</span>
                 </div>
                 <div>
                   <a >

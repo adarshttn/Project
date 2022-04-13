@@ -1,7 +1,11 @@
+import { UserAddIcon } from "@heroicons/react/outline";
 import React from "react";
+import { useContext } from 'react';
+import { AuthContext } from "../../context/AuthContext";
 
 
 export default function Sidebar1() {
+  const {user} =useContext(AuthContext);
   return (
     <div className="rounded-xl overflow-hidden shadow-xl w-64 my-3 bg-white">
       <img src="https://i.imgur.com/dYcYQ7E.png" className="w-full" />
@@ -12,7 +16,7 @@ export default function Sidebar1() {
         />
       </div>
       <div className="text-center px-3 pb-6 pt-2">
-        <h2 className="text-Black text-xl bold font-sans">Disha Agrwal</h2>
+        <h2 className="text-Black text-xl bold font-sans">{user.username}</h2>
         <p className="mt-2 font-sans font-light text-black">
           Newly Recruit at TTN
         </p>

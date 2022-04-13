@@ -1,11 +1,9 @@
 import React from "react";
 import Navbar from "../../components/Layout/Navbar";
-import {useContext} from 'react';
-import {AuthContext} from '../../context/AuthContext';
 
 
 function Profile() {
-  const {user}=useContext(AuthContext);
+
   return (
     <>
       <Navbar />
@@ -25,7 +23,7 @@ function Profile() {
               </div>
               <div className=" px-3 pb-6 pt-2">
                 <h2 className="text-Black text-3xl bold font-sans">
-                  {user.username}
+                Diksha
                 </h2>
               </div>
 

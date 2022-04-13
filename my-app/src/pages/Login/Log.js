@@ -39,12 +39,14 @@ function Log() {
     const provider = new GoogleAuthProvider();
     signInWithPopup(authentication, provider)
       .then((result) => {
-        console.log(result);
+        if(result){return Navigate('/Home');}
       })
       .catch((error) => {
         console.log(error);
       }); 
     }
+
+    
 
       return (
     <>
@@ -62,14 +64,16 @@ function Log() {
               <p className="text-sm text-slate-400 mb-10">
                 Dont't stop unit you're proud
               </p>
-
+              
               <button
                 
                 className="border-2 border-pink-400 text-pink-400 rounded-full px-12 py-2 inline-block font-semibold hover:bg-pink-400 hover:text-white"
-                onClick={SignInWithFirebase}
+                onClick={SignInWithFirebase} 
+                
               >
                 Sign in with Google
               </button>
+            
             </div>
 
             <section className="col-span-3">

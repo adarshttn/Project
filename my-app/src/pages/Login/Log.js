@@ -1,17 +1,18 @@
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 import Home from "../home/Home";
 import react from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
 function Log() {
   const email = useRef();
   const password = useRef();
+  const Navigate=useNavigate()
  
   const { user, isFetching, dispatch } = useContext(AuthContext);
 
@@ -21,12 +22,12 @@ function Log() {
       { email: email.current.value, password: password.current.value },
       dispatch
     );
-  
-
-   
-   
-  
   };
+  useEffect(()=>{
+    if(user ){
+      return Navigate('/Home');
+    }
+  })
  
  
   

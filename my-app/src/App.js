@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 
 import 'react-toastify/dist/ReactToastify.css'
-import React from "react";
+import React, { useEffect } from "react";
 import Log from "./pages/Login/Log";
 import { useNavigate } from 'react-router';
 import Home from "./pages/home/Home";
@@ -16,26 +16,42 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 
 
+
 function App() {
   const { user } = useContext(AuthContext);
- 
+  
+  
 
 
 
 
   return (
+    
 
 
 
 
 
     <>
- 
+      {/* <Router>
+        <Switch>
+          <Route path ="/">
+            <Log />
+          </Route>
+          <Route path="/Home">
+            <Home />
+          </Route>
+          <Route path="/Home/viewprofile">
+            <Viewprofile />
+          </Route>
+        </Switch>
+      </Router> */}
+
 
 
       <Router className="">
         <Routes>
-          <Route exact path="/" element={<Log />} />
+          <Route exact path="/" element={<Log />} ></Route>
           <Route path="/Home" element={<Home />} />
           <Route path="/Home/Viewprofile" element={<Viewprofile />} />
           <Route path="/Home/Viewprofile/Profile" element={<Profile />} />

@@ -36,8 +36,8 @@ function Navbar() {
                     </svg>
                   </a>
                 </div>
-                <div className='dropdown inline-block relative '>
-                  <button className=" rounded-full bg-blue-50">
+                <div className=' dropdown '>
+                  <button className="rounded-full bg-blue-50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="w-8 h-8 text-gray-200"
@@ -53,11 +53,11 @@ function Navbar() {
                       />
                     </svg>
                   </button>
-                  <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
-                    <li class=""><a class="rounded-t bg-blue-400 hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap"
-                      onClick={logOut}
-                    >logout</a></li>
-                  </ul>
+                  
+                  <button className='gap-2' onClick={logOut}>
+                    LogOut
+                  </button>
+                
                 </div>
               </div>
             </div>

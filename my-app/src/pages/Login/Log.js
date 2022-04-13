@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef } from "react";
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 import Home from "../home/Home";
-import react from "react";
+import React from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
@@ -31,10 +31,7 @@ function Log() {
       return Navigate('/Home');
     }
   })
- 
-  
 
-  
   console.log(user)
  
 

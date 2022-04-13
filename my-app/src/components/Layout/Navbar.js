@@ -2,17 +2,13 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserCircleIcon, ChatIcon, LogoutIcon } from "@heroicons/react/outline";
 import './Navbar.css'
+import {useContext} from 'react';
+import {AuthContext} from '../../context/AuthContext';
 
 
 function Navbar() {
-  let info = JSON.parse(localStorage.getItem("user"))
-  const navigate = useNavigate()
 
-  console.warn(info)
-  function logOut() {
-    localStorage.clear();
-    navigate('/')
-  }
+  const {logOut}= useContext(AuthContext);
   return (
     <>
       <body>
@@ -39,7 +35,7 @@ function Navbar() {
                     <UserCircleIcon className="h-8 " />
                   </button>
                   
-                  <button className='gap-2' onClick={logOut}>
+                  <button className='gap-2' onClick= {()=>logOut()}>
                     <LogoutIcon className="h-8 " />
                   </button>
                 

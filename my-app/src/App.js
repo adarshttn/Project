@@ -6,14 +6,13 @@ import {
 import 'react-toastify/dist/ReactToastify.css'
 import React, { useEffect } from "react";
 import Log from "./pages/Login/Log";
-import { useNavigate } from 'react-router';
 import Home from "./pages/home/Home";
 import { ToastContainer } from "react-toastify";
 import Viewprofile from "./pages/viewprofile/Viewprofile";
 import Profile from "./pages/Editprofile/Profile";
 
 import { useContext } from "react";
-import { AuthContext } from "./context/AuthContext";
+import { AuthContext, AuthContextProvider } from "./context/AuthContext";
 
 
 
@@ -50,12 +49,15 @@ function App() {
 
 
       <Router className="">
+        <AuthContextProvider>
         <Routes>
+
           <Route exact path="/" element={<Log />} ></Route>
           <Route path="/Home" element={<Home />} />
           <Route path="/Home/Viewprofile" element={<Viewprofile />} />
           <Route path="/Home/Viewprofile/Profile" element={<Profile />} />
         </Routes>
+        </AuthContextProvider>
       </Router>
       <ToastContainer />
  

@@ -18,7 +18,13 @@ const AuthReducer = (state, action) => {
           isFetching: false,
           error: true,
         };
+        case 'LOGOUT':
+          return {
+              user: null,
+              isAuthenticated: false,
+              error: null,
+          }
+      }
     }
-}
 
         export default AuthReducer

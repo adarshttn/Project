@@ -1,8 +1,13 @@
 import React from "react";
+import {useContext} from 'react';
+import {AuthContext} from '../../context/AuthContext';
 
 import { ThumbUpIcon, ChatAltIcon, ShareIcon } from "@heroicons/react/outline";
 
 export default function Feeds() {
+
+  const {user}=useContext(AuthContext);
+
   return (
     <div className="flex flex-col  ">
       <div className="mt-4 border-none">
@@ -21,7 +26,7 @@ export default function Feeds() {
             alt=""
           />
           <div className="flex flex-col ml-2  mb-2">
-            <span className="font-medium">Ronald oliver</span>
+            <span className="font-medium">{user.username}</span>
             <span className="text-sm">November 21 2021</span>
           </div>
         </div>
@@ -90,7 +95,7 @@ export default function Feeds() {
             alt=""
           />
           <div className="flex flex-col ml-2  mb-2">
-            <span className="font-medium">Ronald oliver</span>
+            <span className="font-medium">{user.username}</span>
             <span className="text-sm">November 21 2021</span>
           </div>
         </div>
@@ -158,7 +163,7 @@ export default function Feeds() {
             alt=""
           />
           <div className="flex flex-col ml-2  mb-2">
-            <span className="font-medium">Ronald oliver</span>
+            <span className="font-medium">{user.username}</span>
             <span className="text-sm">November 21 2021</span>
           </div>
         </div>

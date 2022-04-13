@@ -7,7 +7,7 @@ import {AuthContext} from '../../context/AuthContext';
 
 
 function Navbar() {
-
+  const {user}=useContext(AuthContext);
   const {logOut}= useContext(AuthContext);
   return (
     <>
@@ -23,7 +23,7 @@ function Navbar() {
               </div>
               <div class="flex gap-2  right-0 mt-3 mr-3 text-lg" >
                 <div>
-                  <span>Shekhar Agarwal</span>
+                  <span>{user.username}</span>
                 </div>
                 <div>
                   <a >

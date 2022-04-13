@@ -2,7 +2,7 @@ import React from "react";
 import "./Feeds.css";
 import { ThumbUpIcon, ChatAltIcon, ShareIcon } from "@heroicons/react/outline";
 
-export default function Feeds() {
+export default function Feeds() { 
   return (
     <div className="flex flex-col  ">
       <div className="p-7 bg-white mt-5 rounded-t-2xl shadow-sm ">
@@ -114,7 +114,7 @@ export default function Feeds() {
      
 
 
-      <div className=" rounded-b-2xl bg-white shadow-md text-gray-400 border-t divide-y border-t items-center">
+      <div className=" rounded-b-2xl bg-white shadow-md text-gray-400  items-center">
         <div className="flex justify-between mr-12  ml-12 inputIcon rounded-non rounded-bl-2xl text-s ">
 
           <div className="flex inputIcon gap-1 ">

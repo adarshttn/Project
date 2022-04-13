@@ -23,11 +23,7 @@ function Log() {
       dispatch
     );
   };
-  useEffect(()=>{
-    if(user ){
-      return Navigate('/Home');
-    }
-  })
+ 
  
  
   
@@ -36,7 +32,18 @@ function Log() {
   console.log(user)
  
 
-  return (
+  const SignInWithFirebase = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(authentication, provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      }); 
+    }
+
+      return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
         <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
@@ -53,12 +60,13 @@ function Log() {
                 Dont't stop unit you're proud
               </p>
 
-              <a
-                href="#"
+              <button
+                
                 className="border-2 border-pink-400 text-pink-400 rounded-full px-12 py-2 inline-block font-semibold hover:bg-pink-400 hover:text-white"
+                onClick={SignInWithFirebase}
               >
                 Sign in with Google
-              </a>
+              </button>
             </div>
 
             <section className="col-span-3">

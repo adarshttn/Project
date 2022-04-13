@@ -2,6 +2,7 @@ import React from "react";
 
 import { ThumbUpIcon, ChatAltIcon, ShareIcon } from "@heroicons/react/outline";
 
+
 export default function Feeds() {
   return (
     <div className="flex flex-col  ">

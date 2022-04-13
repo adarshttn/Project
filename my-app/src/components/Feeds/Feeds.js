@@ -39,7 +39,7 @@ export default function Feeds() {
      
 
 
-      <div className=" rounded-b-2xl bg-white shadow-md text-gray-400 border-t divide-y border-t items-center">
+      <div className=" rounded-b-2xl bg-white shadow-md text-gray-400 divide-y border-t items-center">
         <div className="flex justify-between mr-12  ml-12 inputIcon rounded-non rounded-bl-2xl text-s ">
 
           <div className="flex inputIcon gap-1 ">

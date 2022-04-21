@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import {signInWithPopup, GoogleAuthProvider} from 'firebase/auth';
 import {authentication} from './../../firebase-config/firebase-config'
+import Register from "../registration/Register";
 
 
 
@@ -73,6 +74,7 @@ function Log() {
               >
                 Sign in with Google
               </button>
+             
             
             </div>
 
@@ -145,6 +147,15 @@ function Log() {
                        >
                         
                         Login
+
+
+                      </button>
+                      
+                      <button className ="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" type="submit" 
+   
+                      >
+                        
+                      Register
 
 
                       </button>

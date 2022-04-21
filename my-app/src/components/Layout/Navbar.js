@@ -4,6 +4,7 @@ import { UserCircleIcon, ChatIcon, LogoutIcon } from "@heroicons/react/outline";
 import './Navbar.css'
 import {useContext} from 'react';
 import {AuthContext} from '../../context/AuthContext';
+import logo from "../../images/ttnlogo.jpeg"
 
 
 function Navbar() {
@@ -18,7 +19,7 @@ function Navbar() {
             <div class="flex justify-between ">
               <div class="flex space-x-5">
                 <a href="#" class="flex items-center py-4 px-2">
-                  <img src="logo.png" alt="Logo" class="h-6 w-8 mr-0 float-left" />
+                  <img src={logo} alt="Logo" class="h-6 w-8 mr-0 float-left" />
                 </a>
               </div>
               <div class="flex gap-2  right-0 mt-3 mr-3 text-lg" >

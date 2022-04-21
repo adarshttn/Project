@@ -13,6 +13,7 @@ import Profile from "./pages/Editprofile/Profile";
 
 import { useContext } from "react";
 import { AuthContext, AuthContextProvider } from "./context/AuthContext";
+import Register from "./pages/registration/Register";
 
 
 
@@ -51,8 +52,9 @@ function App() {
       <Router className="">
         <AuthContextProvider>
         <Routes>
-
+       
           <Route exact path="/" element={<Log />} ></Route>
+          <Route path="/register" element={<Register />}></Route>
           <Route path="/Home" element={<Home />} />
           <Route path="/Home/Viewprofile" element={<Viewprofile />} />
           <Route path="/Home/Viewprofile/Profile" element={<Profile />} />

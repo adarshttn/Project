@@ -1,37 +1,55 @@
-const express=require('express');
-const mongoose=require('mongoose');
-const dotenv=require('dotenv');
-const helmet=require('helmet');
-const morgan=require('morgan');
-const SignupPage=require('./routes/Signup');
-const SignputPage=require('./routes/Signput');
-const postRoute=require('./routes/posts');
-const profileRoute=require('./routes/ProfileRoute');
-const commentRoute=require('./routes/comment');
-const forgotpassRoute=require('./routes/Forgotpass');
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const multer = require("multer");
+const userRoute = require("./routes/users");
+const authRoute = require("./routes/auth");
+const postRoute = require("./routes/posts");
+const router = express.Router();
+const path = require("path");
 
 dotenv.config();
 
-const app=express();
+mongoose.connect(
+  process.env.MONGO_URL,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {
+    console.log("Connected to MongoDB");
+  }
+);
+app.use("/images", express.static(path.join(__dirname, "public/images")));
 
-mongoose.connect(process.env.MONGO_URL,
-  {useNewUrlParser:true, 
-   useUnifiedTopology: true,
-  }).then(()=>console.log("Connected To MongoDB Atlas"))
-    .catch(err=>console.log('Could  Not Connect To MongoDB',err));
-
+//middleware
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-app.use('/',SignupPage);
-app.use('/',SignputPage);
-app.use('/posts',postRoute);
-app.use('/profile',profileRoute); 
-app.use('/comment',commentRoute);
-app.use('/forgotpass',forgotpassRoute);
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "public/images");
+  },
+  filename: (req, file, cb) => {
+    cb(null, req.body.name);
+  },
+});
 
+const upload = multer({ storage: storage });
+app.post("/api/upload", upload.single("file"), (req, res) => {
+  try {
+    return res.status(200).json("File uploded successfully");
+  } catch (error) {
+    console.error(error);
+  }
+});
 
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
 
-const port=process.env.PORT || 3000
-app.listen(port,()=>console.log(`BackEnd  Server Connected To ${port}`));
+app.listen(8800, () => {
+  console.log("Backend server is running!");
+});
+module.exports = router ;

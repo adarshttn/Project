@@ -67,10 +67,11 @@ const navigate=useNavigate()
               className="loginInput"
               type="password"
             />
-            <button className="loginButton" type="submit">
+            <button className ="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" type="submit">
               Sign Up
             </button>
-            <button className="loginRegisterButton">Log into Account</button>
+            {/* <button className="loginRegisterButton">Log into Account</button> */}
+            <a className ="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white"  href="/">Log into Account</a>
           </form>
         </div>
       </div>

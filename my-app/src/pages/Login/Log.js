@@ -151,14 +151,13 @@ function Log() {
 
                       </button>
                       
-                      <button className ="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white" type="submit" 
-   
-                      >
+                      <a className ="border-2 border-blue-400 text-blue-400 rounded-full px-8 py-2 inline-block font-semibold hover:bg-blue-400 hover:text-white"  href="/register"> Register</a>
+                      
                         
-                      Register
+                      
 
 
-                      </button>
+                     
                     </div>
                   </div>
                 </div>

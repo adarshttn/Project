@@ -121,22 +121,22 @@ router.put("/:id/unfollow", async (req, res) => {
 
 
 // edit profile picture
-router.post('/', (req, res, next) => {
-  if (!req.isAuthenticated()) {
-    res.redirect('/auth/login');
-  }
+// router.post('/', (req, res, next) => {
+//   if (!req.isAuthenticated()) {
+//     res.redirect('/auth/login');
+//   }
 
-  const users = req.app.locals.users;
-  const { first_name, last_name, designation, My_website, gender,birthday,City,state,pin_Code } = req.body;
-  const _id = ObjectID(req.session.passport.user);
+//   const users = req.app.locals.users;
+//   const { first_name, last_name, designation, My_website, gender,birthday,City,state,pin_Code } = req.body;
+//   const _id = ObjectID(req.session.passport.user);
 
-  users.updateOne({ _id }, { $set: { first_name, last_name, designation,My_website,gender,birthday,City,state,pin_Code } }, (err) => {
-    if (err) {
-      throw err;
-    }
+//   users.updateOne({ _id }, { $set: { first_name, last_name, designation,My_website,gender,birthday,City,state,pin_Code } }, (err) => {
+//     if (err) {
+//       throw err;
+//     }
     
-    res.redirect('/users');
-  });
-});
+//     res.redirect('/users');
+//   });
+// });
 
 module.exports = router;

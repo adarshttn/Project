@@ -18,6 +18,7 @@ export default function Home() {
             <Sidebar1 />
             <Sidebar2 />
           </div>
+          
 
           <div className="col-span-2">
             <Topbar />
